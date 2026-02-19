@@ -1,0 +1,13 @@
+hero_data = {
+    "id": 1,
+    "name": "my hero",
+    "secret_name": "austing",
+    "age": 12
+}
+
+print("1. Creating a new hero...")
+response = requests.post(url, json=hero_data)
+print("Response:", response.json())
+print("Success:", response.status_code == 200)
+else:
+    print("Failed to create hero. Status code:", response.status_code)
